@@ -15,17 +15,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: 22
 
       - name: Vite GitHub Pages Deployer
         uses: skywarth/vite-github-pages-deployer@v1.5.0
         with:
-          public_base_path: /coderatul-portfolio/  # Replace with your repository name
+          public_base_path: /Valentines-Chase/  # Replace with your repository name
           build_path: ./dist
           install_phase_node_env: dev
           build_phase_node_env: production
